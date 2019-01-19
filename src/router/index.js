@@ -40,7 +40,7 @@ const Login = resolve => require(['@/components/Login'], resolve)
 Vue.use(Router)
 
 let router = new Router({
-  mode: 'history',
+  mode: 'hash',
   routes: [
     {
       path: '/index',

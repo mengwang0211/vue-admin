@@ -26,7 +26,12 @@ export default {
   deleteWtxBuildingProject: params =>{
     return API.DELETE('/control/buildingProject', params)
   },
-
+  updateWtxBuildingProject: params =>{
+    return API.PUT('/control/buildingProject', params)
+  },
+  addWtxBuildingProject: params =>{
+  return API.POST('/control/buildingProject', params)
+  },
 //===========================================================================
 
   //建筑巡更人员管理

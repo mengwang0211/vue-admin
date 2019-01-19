@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" type="image/x-icon" class="js-site-favicon" href="/static/t16.ico">
+    <title>你访问页面好像不存在</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      .main-body{
+        background-image: url("http://file.wtx163.com/404.jpg");
+        width:100%;
+        height: 100%;
+        position: absolute;
+        background-repeat:round;
+      }
+      .return{
+        padding-left: 47%;
+        padding-top: 33%;
+        font-size: 20px;
+      }
+
+      .second{
+        color: #dd6161;
+        padding-right: 3px;
+      }
+
+    </style>
+  </head>
+<body>
+<div class="main-body">
+  <div class="return">
+    <p><span class="second">5</span>秒后返回登录页</p>
+  </div>
+</div>
+<script src="http://libs.baidu.com/jquery/2.1.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+    var ref = setInterval(function(){
+       var lastsecond = $(".second").html();
+       var second = lastsecond - 1;
+       if (second == 0){
+         location.href = "http://admin.wtx163.com";
+       }else{
+         $(".second").html(second);
+       }
+    },1000);
+  });
+</script>
+
+</body>
+</html>
